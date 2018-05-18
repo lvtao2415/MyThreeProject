@@ -24,6 +24,8 @@
                     <li>@Html.ActionLink("主页", "Index", "Home")</li>
                     <li>@Html.ActionLink("关于", "About", "Home")</li>
                     <li>@Html.ActionLink("联系方式", "Contact", "Home")</li>
+                    <li>@Html.RouteLink("Professors V1", "ProfessorsV1", new { action = "Index", version = 1 })</li>
+                    <li>@Html.RouteLink("Professors V2", "ProfessorsV2", new { action = "Index", version = 2 })</li>
                 </ul>
             </div>
         </div>

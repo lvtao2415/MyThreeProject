@@ -13,6 +13,9 @@ namespace MyThreeProject
     {
         protected void Application_Start()
         {
+            // MVC attribute routes registration
+            RouteTable.Routes.MapMvcAttributeRoutes();
+
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

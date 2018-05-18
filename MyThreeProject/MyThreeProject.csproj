@@ -46,6 +46,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -165,6 +171,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Global\VersionedRouteAttribute.cs" />
+    <Compile Include="Global\VersionedRouteConstraint.cs" />
+    <Compile Include="Models\Professor.cs" />
+    <Compile Include="Models\ProfessorsV1Context.cs" />
+    <Compile Include="Controllers\ProfessorsV1Controller.cs" />
+    <Compile Include="Models\ProfessorsV2Context.cs" />
+    <Compile Include="Controllers\ProfessorsV2Controller.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -206,10 +219,19 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\ProfessorsV1\Create.cshtml" />
+    <Content Include="Views\ProfessorsV1\Delete.cshtml" />
+    <Content Include="Views\ProfessorsV1\Details.cshtml" />
+    <Content Include="Views\ProfessorsV1\Edit.cshtml" />
+    <Content Include="Views\ProfessorsV1\Index.cshtml" />
+    <Content Include="Views\ProfessorsV2\Create.cshtml" />
+    <Content Include="Views\ProfessorsV2\Delete.cshtml" />
+    <Content Include="Views\ProfessorsV2\Details.cshtml" />
+    <Content Include="Views\ProfessorsV2\Edit.cshtml" />
+    <Content Include="Views\ProfessorsV2\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
